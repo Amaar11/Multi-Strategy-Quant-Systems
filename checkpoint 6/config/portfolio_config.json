@@ -1,0 +1,20 @@
+{
+    "sim_years": 10,
+    "brokerage": "oan",
+    "vol_target": 0.20,
+
+    "instruments_config": {
+        "Lbmom":{
+            "oan": "./subsytems/LBMOM/oan_config.json"
+        }
+
+    },
+
+    "subsystems": {
+        "oan": {
+            "lbmom": 1.0
+        }
+    }
+
+}
+
