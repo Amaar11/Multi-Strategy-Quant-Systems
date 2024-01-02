@@ -16,7 +16,7 @@ def get_sp500_df():
     symbol = symbol[:30]
     ohclvs = {}
     for symbol in symbol:
-        symbol_df = yf.Ticker(symbol).history(period="10y")
+        symbol_df = yf.Ticker(symbol).history(period="10y") #this gives us the OHCLV dividends + stock splits
         ohclvs[symbol] = symbol_df[["Open", "High", "Low", "Close", "Volume"]].rename(
             columns={
                 "Open": "open",
