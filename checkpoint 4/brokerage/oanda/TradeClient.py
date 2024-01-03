@@ -90,7 +90,7 @@ def get_account_trades(self):
     except Exception as err:
         pass
 
-def format_date(slef, series):
+def format_date(self, series):
     ddmmyy = series.split("T")[0]-split("-")
     return datetime.date(int(ddmmyy[0]), int(ddmmyy[1]), int(ddmmyy[2]))
 
