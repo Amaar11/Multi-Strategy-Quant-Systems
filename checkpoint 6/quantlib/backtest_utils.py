@@ -6,7 +6,7 @@ def get_backtest_day_stats(portfolio_df, instruments, date, date_prev, date_idx,
     nominal_ret = 0
 
     for inst in instruments:
-        previous_holdings = portfolio_df.lox[date_idx - 1,"{} units".format(inst)]
+        previous_holdings = portfolio_df.loc[date_idx - 1,"{} units".format(inst)]
         if previous_holdings !=0:
             price_change = historical_data.loc["{} close". format(inst)] - historical_data.loc[
             date_prev, "{} close".format(inst)]
