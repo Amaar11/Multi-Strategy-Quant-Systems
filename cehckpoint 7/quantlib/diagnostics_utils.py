@@ -26,15 +26,15 @@ def save_diagnostics(portfolio_df, instruments, brokerage_used, sysname, path=".
     for inst in instruments:
         portfolio_df["{} w".format(inst)].plot()
     plt.title("Instruments Weights")
-    plt.savefig("{}/{}/{}_weights.png".fomrat(path, sysname, brokerage_used), bbox_inches="tight")
+    plt.savefig("{}/{}/{}_weights.png".format(path, sysname, brokerage_used), bbox_inches="tight")
     plt.close()
     
     portfolio_df["leverage"].plot()
     plt.title("Portfolio Leverage")
-    plt.savefig("{}/{}/{}_leverage.png".fomrat(path, sysname, brokerage_used), bbox_inches="tight")
+    plt.savefig("{}/{}/{}_leverage.png".format(path, sysname, brokerage_used), bbox_inches="tight")
     plt.close()
 
     plt.scatter(portfolio_df.index, portfolio_df["capital ret"] * 100)
     plt.title("Daily Return Scatter Plot")
-    plt.savefig("{}/{}/{}_scatter.png".fomrat(path, sysname, brokerage_used), bbox_inches="tight")
+    plt.savefig("{}/{}/{}_scatter.png".format(path, sysname, brokerage_used), bbox_inches="tight")
     plt.close()
